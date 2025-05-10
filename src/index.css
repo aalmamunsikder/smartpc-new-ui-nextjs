@@ -1,0 +1,102 @@
+@import './styles/animations.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 225 70% 5%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 225 70% 5%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 225 70% 5%;
+
+    --primary: 196 83% 48%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 265 68% 68%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 20% 45%;
+
+    --accent: 265 68% 68%;
+    --accent-foreground: 225 70% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 196 83% 48%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 225 70% 5%;
+    --foreground: 210 40% 98%;
+
+    --card: 225 50% 8%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 225 45% 7%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 196 83% 48%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 265 68% 68%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 225 30% 15%;
+    --muted-foreground: 215 20% 75%;
+
+    --accent: 265 68% 68%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 225 30% 20%;
+    --input: 225 30% 20%;
+    --ring: 196 83% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden transition-colors;
+  }
+
+  .glass-card {
+    @apply backdrop-blur-lg border rounded-2xl transition-colors;
+    @apply dark:bg-white/5 dark:border-white/10 dark:shadow-lg dark:shadow-black/20;
+    @apply bg-white/80 border-black/5 shadow-lg;
+  }
+
+  .glow-effect {
+    @apply relative;
+  }
+
+  .glow-effect::after {
+    content: '';
+    @apply absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 bg-gradient-to-r from-primary/30 to-secondary/30 dark:from-primary/40 dark:to-secondary/40 blur-xl -z-10;
+  }
+
+  .glow-effect:hover::after {
+    @apply opacity-100;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent;
+  }
+}
