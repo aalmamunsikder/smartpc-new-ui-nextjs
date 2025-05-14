@@ -56,7 +56,7 @@ const FloatingIcon = ({ icon: Icon, className = "", delay = 0 }: FloatingIconPro
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20">
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden py-20">
       {/* Background Effects */}
       <div className="absolute inset-0 w-full h-full bg-background">
         <div className="absolute top-0 -left-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-10 dark:opacity-30 dark:mix-blend-normal animate-blob"></div>
@@ -131,17 +131,18 @@ const Hero = () => {
             >
               Create, manage, and optimize your computer in minutes
             </motion.p>
+          </div>
+        </div>
+      </div>
 
-            {/* Slideshow */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="mt-6 -mx-4 sm:-mx-6 md:-mx-8 lg:-mx-12"
-            >
-              <HeroSlideshow />
-            </motion.div>
+      {/* Slideshow - Full viewport width solution */}
+      <div className="w-screen mt-8 overflow-hidden">
+        <HeroSlideshow />
+      </div>
 
+      <div className="container mx-auto px-4 relative z-10 mt-8">
+        <div className="w-full">
+          <div className="text-center">
             {/* Stats with enhanced styling */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}

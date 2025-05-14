@@ -1,78 +1,50 @@
-# SmartPC - Cloud PC Management Platform
+# SmartPC - Cloud Computing Platform
 
-A modern, responsive web application built with Next.js 14 for managing cloud PCs, storage, and user accounts.
+A modern Next.js application showcasing SmartPC's cloud computing services with a focus on virtual computers accessible through browsers and smart monitors.
 
 ## Features
 
-- 🖥️ **Cloud PC Management**
-  - Create, start, stop, and manage virtual machines
-  - Monitor resource usage (CPU, Memory, Storage)
-  - Schedule auto-start/stop for cost optimization
-  - Assign users to specific PCs
+- Responsive modern UI built with Next.js 14, Tailwind CSS, and Framer Motion
+- Light and dark mode support with seamless transitions
+- Interactive pricing calculator for custom plans
+- Comprehensive dashboard for managing virtual computers
+- Smooth animations and transitions
 
-- 💾 **Smart Storage**
-  - Cloud storage management
-  - File upload/download
-  - Storage analytics
+## Dark Mode Enhancements
 
-- 👥 **User Management**
-  - User roles and permissions
-  - Team collaboration
-  - Access control
+This project features comprehensive dark mode styling across all sections:
+- Custom glass-card components with dark mode adaptations
+- Optimized background blur and gradient effects
+- Enhanced readability and contrast in dark mode
+- Consistent visual hierarchy maintained across both themes
 
-- 💳 **Billing & Subscription**
-  - Usage tracking
-  - Cost management
-  - Subscription plans
+## Technology Stack
 
-- 📱 **Responsive Design**
-  - Mobile-friendly interface
-  - Dark/Light mode support
-  - Modern UI components
-
-## Tech Stack
-
-- **Framework**: Next.js 14 (App Router)
-- **UI Library**: React 18
+- **Framework**: Next.js 14
 - **Styling**: Tailwind CSS
-- **Components**: Shadcn/ui
-- **State Management**: React Hooks
-- **Form Handling**: React Hook Form
-- **Validation**: Zod
-- **Icons**: Lucide React
-- **Charts**: Recharts
 - **Animations**: Framer Motion
+- **State Management**: React Context API
+- **UI Components**: Shadcn/UI
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js 18.17 or later
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-```bash
-git clone https://github.com/aalmamunsikder/smartpc-new-ui-nextjs.git
-cd smartpc-new-ui-nextjs
-```
-
+1. Clone the repository
 2. Install dependencies:
-```bash
+   ```
 npm install
-# or
-yarn install
 ```
-
 3. Run the development server:
-```bash
+   ```
 npm run dev
-# or
-yarn dev
 ```
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+## Build for Production
+
+```
+npm run build
+npm run start
+```
 
 ## Project Structure
 

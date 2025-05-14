@@ -76,7 +76,7 @@ const HeroSlideshow = () => {
   };
 
   return (
-    <div className="relative w-full aspect-[3/1] rounded-xl overflow-hidden bg-black/10 dark:bg-black/30">
+    <div className="relative w-full h-[200px] sm:h-[250px] md:h-[350px] lg:h-[400px] xl:h-[450px] overflow-hidden bg-black/10 dark:bg-black/30">
       {/* Slides */}
       <AnimatePresence mode="wait">
         <motion.div
@@ -96,7 +96,7 @@ const HeroSlideshow = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-xl md:text-2xl font-bold mb-2"
+              className="text-xl md:text-2xl lg:text-3xl font-bold mb-2"
             >
               {slides[currentSlide].title}
             </motion.h3>
@@ -104,7 +104,7 @@ const HeroSlideshow = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-sm md:text-base text-muted-foreground mb-4"
+              className="text-sm md:text-base lg:text-lg text-muted-foreground mb-4 max-w-3xl"
             >
               {slides[currentSlide].description}
             </motion.p>
